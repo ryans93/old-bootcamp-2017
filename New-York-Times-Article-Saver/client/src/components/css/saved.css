@@ -1,0 +1,19 @@
+button {
+    height: 6vh;
+    width: 8%;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+#titleContainer{
+    padding-top: 3vh;
+}
+
+#savedContainer{
+    border:3px solid black;
+    margin-top: 20px;
+    height:auto;
+    max-height:50vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}

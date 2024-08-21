@@ -1,0 +1,22 @@
+#container-createAccount{
+    height: 80vh;
+    margin-top: 10vh;
+    background-color: white;
+    text-align: center;
+    width: 35%;
+    overflow-y: auto;
+}
+
+#sensCoRange{
+    margin-bottom: 2vh;
+    margin-bottom: 2vh;
+    width: 95%;
+    margin-left: 2.5%;
+}
+
+#btn-createAccount{
+    margin-left: 0;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+}
+

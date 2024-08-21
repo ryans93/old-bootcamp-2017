@@ -1,0 +1,74 @@
+.row{
+    margin:0 0 0 0;
+}
+
+body{
+    overflow-y:hidden;
+}
+
+#background{
+    background-image: url(../images/South-Park-background.jpeg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin:0 0 0 0;
+    height:100vh;
+}
+
+h1{
+    text-align: center;
+    height:100%;
+    margin:0 0 0 0;
+    height:10vh;
+    padding-top:15px;
+    background-color: white;
+    border: 2px solid darkblue;
+}
+
+#contentContainer{
+    background-color: white;
+    height: 75vh;
+    margin-top:6.25vh;
+    overflow-y: scroll;
+}
+
+h2{
+    border-bottom:4px solid grey;
+    text-align: center;
+    margin:0 0 0 0;
+    padding: 10px 0 10px 0;
+}
+
+#responses{
+    font-size: 22px;
+    margin-top:25px;
+}
+
+.btn-default{
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size:20px;
+}
+
+#bottom-row{
+    margin-top:10vh;
+}
+
+#answerDisplay{
+    text-align: center;
+    font-size: 20px;
+    padding-top:2%;
+   
+}
+
+#responseRow{
+    margin-bottom:8vh;
+}
+
+#timer{
+    color:blue;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top:2%;
+}

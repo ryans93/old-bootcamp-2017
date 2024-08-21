@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <title>Pokemon Battle</title>
+</head>
+
+<body>
+    <div class="row" id="row1">
+        <h1></h1>
+        <div class="col-xs-1"></div>
+        <div class="col-xs-4" id="title">Pokemon</div>
+        <div class="col-xs-2"></div>
+        <div class="col-xs-4" id="title">Battle</div>
+    </div>
+
+    <div class="row" id="mainDisplay">
+
+        <div id="playerHPbox">
+            <div id="playerName">
+            </div>
+            <div id="playerStatus">
+            </div>
+            <div id="playerHPdisplay">
+            </div>
+            <div id='playerHPbar'>
+            </div>
+        </div>
+
+        <div id="oppHPbox">
+            <div id="oppName">
+            </div>
+            <div id="oppStatus">
+            </div>
+            <div id="oppHPdisplay">
+            </div>
+            <div id='oppHPbar'>
+            </div>
+        </div>
+
+
+        <div class="btn-group" id="redAndBlue" role="group" aria-label="...">
+            <button type="button" class="btn btn-default player-select" data="red" id="redButton"></button>
+            <button type="button" class="btn btn-default player-select" data="blue" id="blueButton"></button>
+        </div>
+    </div>
+
+    <div class="row" id="log">
+        Pick a trainer!
+    </div>
+
+    <script src="assets/javascript/game.js" type="module"></script>
+</body>
+
+</html>

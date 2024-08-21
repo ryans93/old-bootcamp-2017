@@ -1,0 +1,33 @@
+{
+  "name": "nyt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.1",
+    "mongoose": "^4.11.14",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
+  },
+  "scripts": {
+    "server": "node server.js",
+    "client": "cd client && npm run start",
+    "start": "./node_modules/.bin/concurrently \"./node_modules/.bin/nodemon\" \"npm run client\"",
+    "build": "cd client && npm run build",
+    "deploy": "yarn build && git add . && git commit -m \"Building for production\" && git push heroku master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryans93/New-York-Times-Article-Saver.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryans93/New-York-Times-Article-Saver/issues"
+  },
+  "homepage": "https://github.com/ryans93/New-York-Times-Article-Saver#readme"
+}

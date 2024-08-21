@@ -1,0 +1,23 @@
+.navbar{
+    background-color: lightcyan;
+    border-bottom:solid black 2px;
+    border-right:solid black 2px;
+    border-left:solid black 2px;
+}
+
+.navLink{
+    border-right:solid black 1px;
+}
+
+#homeA{ 
+    padding-left: 0;
+}
+
+.navbar-right{
+    border-left:solid black 1px;
+    
+}
+
+.collapse{
+    width: 101%;
+}

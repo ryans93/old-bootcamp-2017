@@ -1,0 +1,113 @@
+<div id="header">
+    <div class="row">
+        <h1>{{data.title}}</h1>
+        <h3><a href={{this.link}} target="_blank">Read Article</a></h3>
+    </div>
+
+    <div class="row" id="btnRow">
+        <a href="/"><button type="button" class="btn btn-primary btn-lg" id="return">Home</button></a>
+        <button type="button" class="btn btn-lg btn-success add">Add Comment</button>
+    </div>
+</div>
+
+<div class="row" id="commentDisplay">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-10">
+        <h2>Comments</h2>
+        
+        {{#each data.comments}}
+        <h4>{{this.author}}:</h4>
+        <p>{{this.body}}</p>
+        <button type="button" class="btn btn-danger" id="delete-comments" data-id="{{this._id}}">Delete</button> {{/each}}
+    </div>
+</div>
+
+<div class="modal fade" id="commentModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Add comment</h4>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="form-control" id="authorInput" placeholder="Username" aria-describedby="basic-addon1">
+                <textarea class="form-control" rows="10" id="textInput" placeholder="Text"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success" data-dismiss="modal" id="modalSubmit" data-id="{{data._id}}">Post</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<style>
+    #header {
+        text-align: center;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    #btnRow {
+        text-align: center;
+    }
+
+    body {
+        overflow-x: hidden;
+        margin-left: 15px;
+        margin-right: 15px;
+        background-color: wheat;
+    }
+
+    #textInput {
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    #commentDisplay{
+        margin-bottom: 25px;
+    }
+</style>
+
+<script>
+    $(".add").on("click", function () {
+        $("#commentModal").modal('show');
+    });
+
+    $("#modalSubmit").on("click", function () {
+        var author = $("#authorInput").val().trim();
+        var body = $("#textInput").val().trim();
+        var id = $(this).attr("data-id");
+        var entry = {
+            id: id,
+            author: author,
+            body: body
+        };
+        $("#authorInput").val("");
+        $("#textInput").val("");
+        $.post("/api/newComment", entry, function (res) {
+            console.log(res);
+            location.reload(true);
+        });
+    });
+
+    $(document).on("click", "#delete-comments", function (){
+        var id = {
+            id: $(this).attr("data-id")
+            };
+        console.log(id);
+         $.post("/api/comment/delete", id, function (res) {
+            location.reload(true);
+        });
+    })
+
+</script>
+
+<!--
+    background-image: url(news.jpg); background-size: 100% 100%; background-repeat: no-repeat; height: 100vh;
+-->

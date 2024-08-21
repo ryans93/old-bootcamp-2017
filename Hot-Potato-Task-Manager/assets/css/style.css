@@ -1,0 +1,49 @@
+td img {
+    border: solid 2px;
+    height: 200px;
+    width: 220px;
+}
+
+.spin {
+        animation-name: anime;
+        animation-duration: 2s;
+    }
+
+.wraper {
+        text-align: center;
+        position: relative;
+        margin: 50px auto;
+    }
+
+    .pass-image {
+        margin: 5px;
+        width: 200px;
+        height: 200px;
+        position: relative;
+    }
+
+    @keyframes anime {
+        100% {
+            transform: rotate(360deg)
+        }
+    }
+
+    #logo {
+        height: 64px;
+        width: 105px;
+    }
+
+    img{
+        height:100%;
+        width:100%;
+    }
+
+    .assign{
+            height: 100%;
+        color: white !important;
+        border-bottom: solid black 2px;
+    }
+
+.name-btn{        
+        margin:0 4px 0 0 !important;
+    }

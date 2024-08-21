@@ -1,0 +1,36 @@
+<div id="header">
+    <div class= "row">
+        <h1>News Scraper</h1>
+    </div>
+
+    <div class="row" id="btnRow">
+       <a href="/api/scrape"><button type="button" class="btn btn-primary btn-lg" id="scrape">Scrape</button></a>
+    </div>
+</div>
+
+<div class="row" style="margin-bottom:25px;">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-10"> {{#each data}}
+        <h3>{{this.title}}</h3>
+        <h4><a href={{this.link}} target="_blank">Read Article</a></h4>
+        <a href="/article/{{this._id}}"><button type="button" class="btn btn-success" id="view-comments" data-id="{{this._id}}">View Comments</button></a> {{/each}}
+    </div>
+</div>
+
+<style>
+
+
+    h1 {
+        text-align: center;
+    }
+
+
+    #btnRow {
+        text-align: center;
+    }
+
+    body {
+        overflow-x: hidden;
+        background-color: wheat;
+    }
+</style>

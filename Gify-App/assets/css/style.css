@@ -1,0 +1,21 @@
+button{
+    margin:5px 10px 5px 10px;
+    background-color: lightblue;
+    font-weight:bold;
+}
+
+.row{
+    margin-left:0
+}
+
+h1{
+    text-align: center;
+    background-color: red;
+    color:white;
+    margin-top:0;
+    padding: 10px 0 10px 0;
+}
+
+#submit{
+    margin-left:0;
+}

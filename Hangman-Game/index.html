@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <body>
+
+        <title>Hangman</title>
+</head>
+
+<div class="row">
+    <div class="col-xs-12">
+        <h1>Hangman Ocean Style</h1>
+    </div>
+</div>
+
+<div class="row" id="background">
+    <div class="col-xs-12">
+        <div class="row">
+            <!-- Guesses Remaining Column-->
+            <div class="col-xs-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="panel-title" id="Guesses-Remaining">Guesses Remaining</h2>
+                    </div>
+                    <div class="panel-body" id="guessesRemaining">
+                        <div class="guessBlock" id="block1"></div>
+                        <div class="guessBlock" id="block2"></div>
+                        <div class="guessBlock" id="block3"></div>
+                        <div class="guessBlock" id="block4"></div>
+                        <div class="guessBlock" id="block5"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Word Guess Box Column-->
+            <div class="col-xs-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">Guess the Ocean Animal!</h2>
+                    </div>
+                    <div class="panel-body" id="word">
+                    </div>
+                </div>
+            </div>
+
+            <!--Letters Guessed Column-->
+            <div class="col-xs-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">Letters Guessed</h2>
+                    </div>
+                    <div class="panel-body" id="lettersGuessed">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!--Animal image Column-->
+            <div class="col-xs-7" id="animalImageBox">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="panel-title" id="image-box-title">Animal name goes here</h2>
+                    </div>
+                    <div class="panel-body" id="animalImage">
+                    </div>
+                </div>
+            </div>
+            <!--Fact Column-->
+            <div class="col-xs-5" id="animalFactBox">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="panel-title" id="fact-box-title">Interesting facts about animal</h2>
+                    </div>
+                    <div class="panel-body" id="facts-box"> 
+                        <ul>
+                            <li id="fact1"></li>
+                            <li id="fact2"></li>
+                            <li id="fact3"></li>
+                        </ul>
+                        <button type="button" class="btn btn-success" onclick="location.reload()">Play again?</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+
+
+
+
+</body>
+<script src="assets/javascript/game.js"></script>
+
+</html>

@@ -1,0 +1,24 @@
+#container-home{
+    background-color: white;
+    margin-top: 10vh;
+    height: 80vh;
+    text-align: center;
+    width: 50%;
+    overflow-y: auto;
+}
+
+.paragraph{
+    text-align: left;
+}
+
+#features, #upcoming-features{
+    text-align: left;
+}
+
+.list{
+    margin-bottom:10px;
+}
+
+#upcoming-features{
+    margin-bottom:3vh;
+}
